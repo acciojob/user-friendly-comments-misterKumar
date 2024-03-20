@@ -1,5 +1,5 @@
 //your JS code here. If required.
-const commentsContianer=document.querySelector(".comments-container");
+/*const commentsContianer=document.querySelector(".comments-container");
 const textBoxInput=document.querySelector("#textInput");
 const submitBtn=document.querySelector("#submit-btn");
 
@@ -17,4 +17,4 @@ submitBtn.addEventListener("click",()=>{
   `
 		commentsContianer.appendChild(div);
 	}
-})
+})*/

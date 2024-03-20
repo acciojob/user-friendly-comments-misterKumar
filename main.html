@@ -8,24 +8,21 @@
 
 <body>
 	<!-- the entire body must be written by student -->
-	<textarea rows="4" cols="50"  id="textInput" placeholder="Write your comment here..." ></textarea>
-	<button id="submit-btn">Submit</button>
-	<div class="comments-container" >
-		
+	<h3>Comments</h3>
+
+	<p>Share your thoughts below!</p>
+	  <textarea placeholder="Write your comment here..." rows="4" cols="50"></textarea> 
+	<button type="submit">Submit</button>
+	<div class="comments-container">
+	<p class="comment">This is an Excellant Article!</p>
+		<div class="author">Akash -  Feb 24, 2022</div>
+     </div>
+
+	<div class="comments-container">
+     <p class="comment">I totally Agree</p>
+		<div class="author">Mrityunjay - Tue, 24 Oct 2023</div>
 	</div>
-	<script>
-		const date=new Date().toUTCString();
-		const temp=document.getElementsByClassName("comments-container")[0];
-		temp.innerHTML=`
-        <div class="comment">
-			<h1>Task 1</h1>
-			<div class="author">
-				<p>Mister Kumar</p>
-				<p>${date}</p>
-			</div>
-		</div>
-  `
-	</script>
+	
     <script type="text/javascript" src="./script.js">
 </script>
 
