@@ -8,6 +8,25 @@
 
 <body>
 	<!-- the entire body must be written by student -->
+	<textarea rows="4" cols="50"  id="textInput" placeholder="Write your comment here..." ></textarea>
+	<button id="submit-btn">Submit</button>
+	<div class="comments-container" >
+		
+=
+	</div>
+	<script>
+		const date=new Date().toUTCString();
+		const temp=document.getElementsByClassName("comments-container")[0];
+		temp.innerHTML=`
+        <div class="comment">
+			<h1>Task 1</h1>
+			<div class="author">
+				<p>Mister Kumar</p>
+				<p>${date}</p>
+			</div>
+		</div>
+  `
+	</script>
     <script type="text/javascript" src="./script.js">
 </script>
 

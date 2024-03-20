@@ -1,1 +1,5 @@
 /*  your css code here. If applicable */
+.author{
+	display:flex;
+	gap:20px;
+}
