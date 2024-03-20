@@ -15,8 +15,8 @@ submitBtn.addEventListener("click", () => {
 		const minutes = date.getMinutes().toString().padStart(2, "0");
 		const seconds = date.getSeconds().toString().padStart(2, "0");
 
-        const dateString = `${dayOfWeek}, ${day} ${month} ${year} ${hours}:${minutes}:${seconds} GMT`;
-
+        //const dateString = `${dayOfWeek}, ${day} ${month} ${year} ${hours}:${minutes}:${seconds} GMT`;
+		const dateString = date.toISOString();
         div.innerHTML = `
             <h1>${textBoxInput.value}</h1>
             <div class="author">
