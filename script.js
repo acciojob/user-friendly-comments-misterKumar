@@ -9,7 +9,7 @@ submitBtn.addEventListener("click", () => {
         div.classList.add("comment");
 
         const date = new Date(); // Current date and time
-        const dateString = formatDate(date); // Format date string
+        const dateString = date.toLocaleString("en-US", { timeZone: "UTC" }); // Convert date to local string with UTC timezone
 
         div.innerHTML = `
             <h1>${textBoxInput.value}</h1>
@@ -19,13 +19,7 @@ submitBtn.addEventListener("click", () => {
             </div>
         `;
 
-        commentsContainer.prepend(div); // Prepend new comment to display in descending order
+        commentsContainer.insertBefore(div, commentsContainer.firstChild); // Insert new comment at the beginning to display in descending order
         textBoxInput.value = ""; // Clear input field after submission
     }
 });
-
-// Function to format date string
-function formatDate(date) {
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
-    return date.toLocaleDateString('en-US', options);
-}

@@ -12,23 +12,11 @@
 	<button id="submit-btn">Submit</button>
 	<div class="comments-container" >
 		
-<!-- 		<div class="comment">
-			<h1>Task 2</h1>
-			<div class="author">
-				<p>Piyush</p>
-				<p>Mon, 25 Dec 2023 17:17:20 GMT</p>
-			</div>
-		</div>
-		<div class="comment">
-			<h1>Task 3</h1>
-			<div class="author">
-				<p>Piyush</p>
-				<p>Mon, 25 Dec 2023 17:17:20 GMT</p>
-			</div>
-		</div> -->
+
 	</div>
 	<script>
-		const date=new Date().toUTCString();
+		const date = new Date(); // Current date and time
+        const dateString = date.toLocaleString("en-US", { timeZone: "UTC" }); // Convert date to local string with UTC timezone
 		const temp=document.getElementsByClassName("comments-container")[0];
 		temp.innerHTML=`
         <div class="comment">
