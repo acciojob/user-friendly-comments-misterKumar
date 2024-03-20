@@ -9,7 +9,7 @@ submitBtn.addEventListener("click", () => {
         div.classList.add("comment");
 
         const date = new Date(); // Current date and time
-        const dateString = date.toUTCString(); // Convert date to UTC string
+        const dateString = formatDate(date); // Format date string
 
         div.innerHTML = `
             <h1>${textBoxInput.value}</h1>
@@ -23,3 +23,9 @@ submitBtn.addEventListener("click", () => {
         textBoxInput.value = ""; // Clear input field after submission
     }
 });
+
+// Function to format date string
+function formatDate(date) {
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
+    return date.toLocaleDateString('en-US', options);
+}
